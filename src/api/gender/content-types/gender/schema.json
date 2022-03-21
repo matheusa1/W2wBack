@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genders",
+  "info": {
+    "singularName": "gender",
+    "pluralName": "genders",
+    "displayName": "gender"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "terror",
+        "romance",
+        "acao",
+        "documentario",
+        "guerra",
+        "comedia",
+        "sci-fi",
+        "animacao",
+        "esporte",
+        "drama",
+        "crime",
+        "aventura",
+        "familiar",
+        "fantasia",
+        "historia",
+        "musical",
+        "misterio",
+        "suspense",
+        "classicos",
+        "cult"
+      ]
+    },
+    "media": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::media.media",
+      "mappedBy": "genders"
+    }
+  }
+}
